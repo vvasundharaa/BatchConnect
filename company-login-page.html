@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batch Plant Client Dashboard</title>
+    <style>
+     /* Global styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #333;
+    color: #f9da0b;
+    font-weight: bold;
+    padding: 10px 20px;
+    overflow: hidden;
+}
+.navbar a {
+    float: left;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Add transition effect */
+}
+.navbar a:hover {
+    background-color: #555; /* Darker background on hover */
+}
+
+/* Dashboard section styles */
+#dashboard {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffe23b; /* Yellow background */
+    padding: 20px;
+    margin-bottom: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+.dashboard-features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.dashboard-feature {
+    flex: 0 1 300px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition effect */
+}
+.dashboard-feature:hover {
+    transform: translateY(-5px); /* Lift the feature on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Add shadow effect on hover */
+}
+
+.dashboard-feature h3 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.dashboard-feature h3 i {
+    margin-right: 10px;
+}
+
+/* Search and Discovery section styles */
+.search-discovery form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; 
+    
+}
+
+.search-discovery label {
+    color: #0c0000;
+    font-weight: bold;
+    width: 120px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.search-discovery input[type="text"],
+.search-discovery input[type="number"],
+.search-discovery select {
+    flex: 1;
+    padding: 8px;
+    margin: 4px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: calc(33.33% - 90px); /* Adjust input width for three items in a row */
+}
+
+.search-discovery button[type="submit"] {
+    background-color: #594c04;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.search-discovery button[type="submit"]:hover {
+    background-color: #d18b12;
+}
+.search-discovery h2 {
+    margin-left: 20px;
+}
+
+
+/* Client Requirements Submission section styles */
+section#requirements-submission {
+    padding: 20px;
+    background-color: #ffe23b; /* Yellow background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+section#requirements-submission h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+section#requirements-submission form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; /* Align items vertically */
+}
+
+section#requirements-submission label {
+    color: #000000;
+    font-weight: bold;
+    width: 120px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+section#requirements-submission input[type="text"],
+section#requirements-submission input[type="number"],
+section#requirements-submission select {
+    flex: 1;
+    padding: 8px;
+    margin: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: calc(33.33% - 130px); /* Adjust input width for three items in a row */
+}
+
+section#requirements-submission button[type="submit"] {
+    background-color: #594c04;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+section#requirements-submission button[type="submit"]:hover {
+    background-color: #d18b12;
+     /* Darker green on hover */
+}
+
+   </style>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <a href="#dashboard">Dashboard</a>
+    <a href="#profile">Profile Information</a>
+    <a href="#search-discovery">Search and Discovery</a>
+    <a href="#requirements-submission">Client Requirements Submission</a>
+    <a href="#project-management">Project Management</a>
+    <a href="#notifications-alerts">Notifications and Alerts</a>
+</div>
+
+<section id="dashboard">
+    <h2>Dashboard</h2>
+    </div>
+    <div class="dashboard-features">
+        
+        <div class="dashboard-feature">
+            <h3><i class="fas fa-bell"></i> Recent Notifications</h3>
+            
+        </div>
+        <!-- Additional features -->
+        <div class="dashboard-feature">
+            <h3><i class="fas fa-chart-pie"></i> Project Status</h3>
+        </div>
+        <div class="dashboard-feature">
+            <h3><i class="fas fa-calendar-alt"></i> Calendar</h3>
+        
+        </div>
+       
+      
+        <div class="dashboard-feature">
+            <h3><i class="fas fa-chart-line"></i> Analytics</h3>
+
+        </div>
+    </div>
+</section>
+
+
+
+<br><br>
+
+<section class="search-discovery">
+    <h2>Search and Discovery</h2>
+    <form>
+        <label for="location">Location:</label>
+        <input type="text" id="location" placeholder="Enter location...">
+        <label for="project-size">Project Size:</label>
+        <select id="project-size">
+            <option value="">Select Size</option>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+        </select>
+        <label for="project-type">Project Type:</label>
+        <select id="project-type">
+            <option value="">Select Type</option>
+            <option value="residential">Residential</option>
+            <option value="commercial">Commercial</option>
+            <option value="industrial">Industrial</option>
+        </select>
+        <button type="submit">Search</button>
+    </form>
+</section>
+
+<br><br><br>
+<section id="requirements-submission">
+    <br>
+    <h2>Client Requirements Submission</h2>
+    <form>
+        <label for="order-summary">Order Summary</label>
+        <input type="text" id="order-summary" placeholder="Enter order summary...">
+        
+        <label for="budget-quote">Budget Quote</label>
+        <input type="text" id="budget-quote" placeholder="Enter budget quote...">
+        
+        <label for="delivery-date">Delivery Date:</label>
+        <input type="date" id="delivery-date">
+        <button type="submit">Submit</button>
+    </form>
+    <br><br>
+</section>
+
+
+</body>
+</html>

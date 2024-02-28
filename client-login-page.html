@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batch Plant Filtering</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h2 {
+            font-family: sans-serif;
+            margin-top: 20px;
+            color:#8c7805;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .filter-container {
+            display: flex;
+            align-items: center;
+            background-color: #020100; /* Light gray background */
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .filter-container > * {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .filter-container > *:last-child {
+            margin-right: 0;
+        }
+
+        .filter label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333; /* Dark gray text color */
+        }
+
+        .filter input, .filter select  {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #CCC; /* Light gray border */
+            border-radius: 3px;
+            color: #030300;
+            
+        }
+
+        button.filter {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #ffe23b; /* Blue background color */
+            color: #FFF; /* White text color */
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button.filter:hover {
+            background-color: #ffe23b; /* Darker blue on hover */
+        }
+        
+        section {
+            display: flex;
+            overflow-x: auto; /* Add horizontal scrollbar */
+        }
+
+        section div {
+            flex: 0 0 auto; /* Prevent flex items from shrinking */
+            width: 350px;
+            height: 480px; /* Set desired width */
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        section div img {
+            width: 300px;
+            height: 190px; /* Set a fixed height for uniformity */
+            object-fit: cover;
+            }
+    .btn {
+        display: inline-block;
+        text-align: center;
+        background-color: #000000; /* Set button background color */
+        color: #fff; /* Set button text color */
+        padding: 10px 20px; /* Set padding */
+        text-decoration: none; /* Remove underline */
+        border-radius: 5px; /* Add rounded corners */
+        transition: background-color 0.3s; /* Smooth transition for hover effect */
+    }
+
+    .btn:hover {
+        background-color: #fde807; /* Change background color on hover */
+    }
+    .placeholder-image { 
+        position: fixed;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .p-img {
+        height: 350px;
+        width: 450px;
+    }
+    .filter label {
+        color:#fde807 ;
+    }
+
+        /* Add additional styling as needed */
+        </style>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.css">
+</head>
+<body>
+    <h2>Batch Plant Locator - Streamline Your Construction Projects</h2>
+    <div class="filter-container">
+        <div class="filter">
+            <label for="location">Location</label>
+            <input type="text" id="location">
+        </div>
+        <div class="filter">
+            <label for="proximity">Nearby Sites</label>
+            <select id="proximity">
+                <option value="">Select Distance</option>
+                <option value="100">less than 10 kms</option>
+                <option value="100">less than 20 kms</option>
+                <option value="below50">less than 50 kms</option>
+                <option value="100">less than 100 kms</option>
+                <option value="100">Above 100 kms</option>
+            </select>
+        </div>
+        <div class="filter">
+            <label for="status">Operational Status:</label>
+            <select id="status">
+                <option value="">Select Status</option>
+                <option value="active">Active</option>
+                <option value="maintenance">Under Maintenance</option>
+                <option value="closed">Closed</option>
+            </select>
+        </div>
+        <div class="filter">
+            <label for="rating">Rating</label>
+            <select id="rating">
+                <option value="">Select Rating</option>
+                <option value="1">1 & 2 Stars</option>
+                <option value="2">3 Stars and above</option>
+                <option value="3">4 Stars and above </option>
+                <option value="3">5 Stars</option>
+               
+            </select>
+        </div>
+        <div>
+            <button class="filter" onclick="applyFilters()">Apply Filters</button>
+        </div>
+    </div>
+
+    <div id="placeholderImage" class="placeholder-image">
+        <img class='p-img'src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyQObhECU2RoEr9V0gE8Q7laNKzu8LJe9nhWSEfavrL651qp3J" alt="Placeholder Image">
+    </div>
+
+    <!-- Content section -->
+        <section id="batchPlants" style="display: none;">
+            <div>
+                <img src="https://lh3.googleusercontent.com/p/AF1QipPyjAux3rfTnG70lF6fj0BL3g5tXJKcnuRaAl3B=s680-w680-h510" alt="">
+                <h4>RMC BATCHING PLANT</h4>
+                <p>Best Quality RMC Batching Plant Mfg. By Brickvision Equipment. This unit is suitable for a medium scale requirement and is available for 22, 30, 45, 60 M3/Hr. capacities. Its design eliminates the need for foundation for the unit.</p>
+                <a href="mailto:chitigalamouleeshwari@gmail.com" class="btn">Contact</a>
+            </div>
+        
+            <div>
+                <img src="https://lh3.googleusercontent.com/p/AF1QipM2C5fad24aRC8MRAcv8jad4wsaPllnIn3Gtxur=s680-w680-h510" alt="">
+                <h4>TVC CONCRETE BATCHING PLANT</h4>
+                <p>Tvc Concrete Batching Plant in Financial District, Hyderabad has skilled manpower to execute and complete construction projects.we suggest you get complete clarity about their policy by getting in touch with Tvc Concrete Batching Plant .</p>
+                <a href="mailto:chitigalamouleeshwari@gmail.com" class="btn">Contact</a>
+            </div>
+        
+            <div>
+                <img src="https://lh3.googleusercontent.com/p/AF1QipM2k3iC0Zc49QKMKd7kxK_6QMLp7u5xt9btK9kj=s1360-w1360-h1020" alt="">
+                <h4>Q MIX CONCRETE BATCHING PLANT</h4>
+                <p>Qmix Concrete is one of the largest ready-mixed concrete manufacturers in Hyderabad, Q mix Concrete India currently operates a total of Hyderabad, Telangana ready-mixed concrete and aggregate crushing supplies to my towns watertank</p>
+                <a href="mailto:chitigalamouleeshwari@gmail.com" class="btn">Contact</a>
+            </div>
+        
+            <div>
+                <img src="https://lh3.googleusercontent.com/p/AF1QipMaoxLhEtxzAG-RUoFQVKz_OakZLWtnK2XvwRyx=s680-w680-h510" alt="">
+                <h4>SS RMC INFRA</h4>
+                <p>SS Rmc Infra in Patancheru, is known to satisfactorily cater to the demands of its customer base. The business came into existence in 2004. since then, been a known name in its field. It stands located near Patancheru-502319.</p>
+                <a href="mailto:chitigalamouleeshwari@gmail.com" class="btn">Contact</a>
+            </div>
+        
+            <div>
+                <img src="images/blog-5.jpg" alt="">
+                <h4>ABC Batch Plant</h4>
+                <p>ABC is one of the largest ready-mixed concrete manufacturers in Hyderabad, Q mix Concrete India currently operates a total of Hyderabad, Telangana ready-mixed concrete and aggregate crushing supplies to my towns watertank</p>
+                <a href="mailto:chitigalamouleeshwari@gmail.com" class="btn">Contact</a>
+            </div>
+        
+            <div>
+                <img src="images/blog-6.jpg" alt="">
+                <h4>ABC Batch Plant</h4>
+                <p>ABC is one of the largest ready-mixed concrete manufacturers in Hyderabad, Q mix Concrete India currently operates a total of Hyderabad, Telangana ready-mixed concrete and aggregate crushing supplies to my towns watertank</p>
+                <a href="mailto:chitigalamouleeshwari@gmail.com" class="btn">Contact</a>
+            </div>
+        </section>
+        
+    </section>
+
+
+
+    <script>
+           function applyFilters() {
+            // Implement filtering logic here
+            // For now, let's just show the content section
+            document.getElementById("placeholderImage").style.display = "none"; // Hide the placeholder image
+            document.getElementById("batchPlants").style.display = "flex"; // Display the content section
+        }
+    </script>
+</body>
+</html>
